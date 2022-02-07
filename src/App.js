@@ -1,19 +1,15 @@
 // todo comment: style is only width: 1536px,height: 760px;
 import React from "react";
 import "./App.css";
-import FormControl from "@mui/material/FormControl";
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
 import { useState } from "react";
 import { IoFingerPrint } from "react-icons/io5";
-import { useFormik } from "formik";
+import Signup from "./common/signup";
+import Login from "./common/login";
 
 function App() {
 	let [isShow, setIsShow] = useState(false);
+
 	const AD = "<Awin Desing />";
-
-	// const formik = useFormik({initialValues:{}});
-
 	return (
 		<section className="App w-screen h-screen grid place-items-center">
 			<main className="xl:w-[1170px]">
@@ -40,74 +36,10 @@ function App() {
 						</div>
 					)}
 					<div className="w-1/2 h-full grid place-items-center">
-						<div className="w-[90%] h-[95%]">
-							<div className="w-full h-[10%] flex justify-start items-center text-gray-800 text-xl font-extrabold">
-								<h1>Awin Desgin</h1>
-							</div>
-							<div className="w-full h-auto">
-								<p className="text-sm text-gray-600 font-bold">Sign Up</p>
-								<h1 className="text-gray-800 text-3xl font-bold">
-									Hi, <span className="text-[#267f92]">Your Welcome</span>
-								</h1>
-								<p className="text-xs text-gray-400 font-bold tracking-wider">
-									Press sing up to continue
-								</p>
-							</div>
-							<div className="w-full h-3/5">
-								<FormControl className="w-[90%]">
-									<TextField fullWidth label="Name" margin="normal" id="fullWidth" />
-									<TextField fullWidth label="Email" margin="normal" id="fullWidth" />
-									<TextField fullWidth label="Password" margin="normal" id="fullWidth" />
-									<TextField fullWidth label="Password Configore" margin="normal" id="fullWidth" />
-								</FormControl>
-							</div>
-							<div className="w-[90%] h-[10%] flex justify-between items-center">
-								<Button variant="contained" className="w-2/5 h-12 bg-[#267f92]">
-									Sign Up
-								</Button>
-								<Button
-									variant="outlined"
-									className="w-2/5 h-12 font-bold"
-									onClick={() => setIsShow(!isShow)}
-								>
-									I Have Account
-								</Button>
-							</div>
-						</div>
+						<Signup />
 					</div>
 					<div className="w-1/2 h-full grid place-items-center">
-						<div className="w-[90%] h-[75%]">
-							<div className="w-full h-[10%] flex justify-start items-center text-gray-800 text-xl font-extrabold">
-								<h1>Awin Desgin</h1>
-							</div>
-							<div className="w-full h-auto">
-								<p className="text-sm text-gray-600 font-bold">Log In</p>
-								<h1 className="text-gray-800 text-3xl font-bold">
-									Hi, <span className="text-[#267f92]">Good Day</span>
-								</h1>
-								<p className="text-xs text-gray-400 font-bold tracking-wider">
-									Press log in to continue
-								</p>
-							</div>
-							<div className="w-full h-2/5 flex flex-col justify-center">
-								<FormControl className="w-[90%]">
-									<TextField fullWidth label="Email" margin="normal" id="fullWidth" />
-									<TextField fullWidth label="Password" margin="normal" id="fullWidth" />
-								</FormControl>
-							</div>
-							<div className="w-[90%] h-[10%] flex justify-between items-center">
-								<Button variant="contained" className="w-2/5 h-12 bg-[#267f92]">
-									Log In
-								</Button>
-								<Button
-									variant="outlined"
-									className="w-2/5 h-12 font-bold"
-									onClick={() => setIsShow(!isShow)}
-								>
-									Create Account
-								</Button>
-							</div>
-						</div>
+						<Login />
 					</div>
 				</div>
 			</main>
