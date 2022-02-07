@@ -11,7 +11,7 @@
 		@apply text-lg;
 	}
 	a {
-		@apply no-underline;
+		@apply underline;
 	}
 }
 

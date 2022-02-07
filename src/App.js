@@ -14,7 +14,7 @@ function App() {
 		<section className="App w-screen h-screen grid place-items-center">
 			<main className="xl:w-[1170px]">
 				<div className="mx-auto border-4 border-solid border-[#267f92] rounded-2xl bg-white shadow-lg w-[90%] h-[75vh] flex">
-					{isShow === false ? (
+					{document.documentURI === "http://localhost:3000/log-in" ? (
 						<div className="fixed rounded-lg moveLeft bg-[#267f92] w-[526px] h-[74vh] grid place-items-center z-50">
 							<div className="h-2/5 flex flex-col justify-around items-center">
 								<IoFingerPrint className="text-5xl text-white animate-pulse" />

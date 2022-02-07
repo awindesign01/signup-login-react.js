@@ -27,8 +27,9 @@ const Signup = () => {
 						// todo comment: post user
 						axios.post("http://localhost:8000/users", values);
 						// todo comment: empty forms
-						 return setFormValue("");
+						setFormValue("");
 						// todo comment: redirect to dashboad screen
+						window.location.href = "http://localhost:3000/log-in";
 					}
 				})
 				.catch((err) => console.log("error", err));
@@ -60,12 +61,13 @@ const Signup = () => {
 						>
 							Sign Up
 						</button>
-						<button
-							className="border-2 border-solid border-[#267f92] border-opacity-50 rounded-full w-2/5 h-12 bg-white text-[#267f92] font-bold tracking-wide"
+						<p
+							className="rounded-full w-auto h-auto bg-white text-sm text-[#267f92] font-bold tracking-wide"
 							// onClick={() => setIsShow(!isShow)}
+							type="none"
 						>
-							I Have Account
-						</button>
+							I'am have account. <a href="/log-in">Log in</a>
+						</p>
 					</div>
 				</form>
 			</div>
