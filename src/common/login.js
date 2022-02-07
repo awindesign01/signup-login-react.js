@@ -19,7 +19,7 @@ const Login = () => {
 					if (res.data.find((i) => i.email === values.email)) {
 						return alert("welcome");
 					} else {
-						return alert("user not find");
+						return alert("user not find \nplease sign up");
 						// todo comment: going to sign up
 					}
 				})
@@ -58,7 +58,7 @@ const Login = () => {
 						// onClick={() => setIsShow(!isShow)}
 						type="none"
 					>
-						I'am not account. <a href="#">Create Account</a>
+						I'am not account. <a href="/sign-up">Create Account</a>
 					</p>
 				</form>
 			</div>
